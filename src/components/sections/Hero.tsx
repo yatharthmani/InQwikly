@@ -15,9 +15,13 @@ function seededRandom(seed: number): number {
 export function Hero() {
   const [mounted, setMounted] = useState(false);
 
+  // Client-only render gate — deliberately calls setState in an effect.
+  // This is the standard pattern for SSR-safe client detection.
+  /* eslint-disable react-hooks/set-state-in-effect */
   useEffect(() => {
     setMounted(true);
   }, []);
+  /* eslint-enable react-hooks/set-state-in-effect */
 
   // Compute particle data once, stably, so SSR and client agree
   const particles = useMemo(() => {

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useState, useRef } from "react";
+import { useState, useRef, type FormEvent } from "react";
 
 export function ClosingCTA() {
   const [email, setEmail] = useState("");
@@ -16,7 +16,7 @@ export function ClosingCTA() {
 
   const pathLength = useTransform(scrollYProgress, [0.3, 1], [0, 1]);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     if (!email) return;
 
@@ -39,6 +39,7 @@ export function ClosingCTA() {
         setStatus("error");
         setMessage(data.error || "Something went wrong. Please try again.");
       }
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (_err) {
       setStatus("error");
       setMessage("Network error. Please try again.");
