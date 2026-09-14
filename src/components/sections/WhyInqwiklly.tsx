@@ -38,21 +38,21 @@ export function WhyInqwiklly() {
           </div>
           
           {/* Hand-drawn style circle highlight */}
-          <motion.svg 
-            initial={{ pathLength: 0, opacity: 0 }}
-            whileInView={{ pathLength: 1, opacity: 1 }}
-            viewport={{ once: false }}
-            transition={{ duration: 1.5, delay: 0.8, ease: "easeInOut" }}
+          <svg 
             className="absolute inset-0 w-full h-full text-brand-red overflow-visible pointer-events-none -z-10" 
             viewBox="0 0 400 100" 
             preserveAspectRatio="none"
           >
-            <path 
+            <motion.path 
+              initial={{ pathLength: 0, opacity: 0 }}
+              whileInView={{ pathLength: 1, opacity: 1 }}
+              viewport={{ once: false }}
+              transition={{ duration: 1.5, delay: 0.8, ease: "easeInOut" }}
               d="M 200,5 C 320,5 390,20 390,50 C 390,80 320,95 200,95 C 80,95 10,80 10,50 C 10,20 80,5 200,5 Z" 
               fill="none" 
               stroke="currentColor" 
               strokeWidth="4" 
-              strokeLinecap="round"
+              strokeLinecap="round" 
               strokeLinejoin="round"
               vectorEffect="non-scaling-stroke"
               style={{
@@ -60,7 +60,7 @@ export function WhyInqwiklly() {
                 transform: "scale(1.05, 1.3) rotate(-2deg)"
               }}
             />
-          </motion.svg>
+          </svg>
         </motion.div>
       </div>
     </section>

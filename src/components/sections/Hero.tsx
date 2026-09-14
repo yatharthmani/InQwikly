@@ -92,22 +92,22 @@ export function Hero() {
           <h2 className="text-3xl md:text-4xl font-black tracking-tight relative inline-block">
             Meet INQWIKLLY.
             {/* Hand-drawn style underline */}
-            <motion.svg
-              initial={{ pathLength: 0, opacity: 0 }}
-              animate={{ pathLength: 1, opacity: 1 }}
-              transition={{ duration: 1, delay: 2.8, ease: "easeInOut" }}
+            <svg
               className="absolute -bottom-3 left-0 w-full h-4 text-brand-red overflow-visible"
               viewBox="0 0 100 10"
               preserveAspectRatio="none"
             >
-              <path
+              <motion.path
+                initial={{ pathLength: 0, opacity: 0 }}
+                animate={{ pathLength: 1, opacity: 1 }}
+                transition={{ duration: 1, delay: 2.8, ease: "easeInOut" }}
                 d="M 0 5 Q 50 12 100 2"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="4"
                 strokeLinecap="round"
               />
-            </motion.svg>
+            </svg>
           </h2>
 
           <p className="mt-8 text-xl md:text-2xl font-bold max-w-md text-brand-black">
