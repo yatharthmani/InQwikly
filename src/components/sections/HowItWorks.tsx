@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { Newspaper, Zap, Brain, Timer } from "lucide-react";
-import { useRef } from "react";
 
 const steps = [
   { icon: Newspaper, text: "We find the important story." },
@@ -12,7 +11,6 @@ const steps = [
 ];
 
 export function HowItWorks() {
-  const containerRef = useRef<HTMLDivElement>(null);
 
   const containerVariants = {
     hidden: {},
@@ -35,7 +33,6 @@ export function HowItWorks() {
 
   return (
     <section 
-      ref={containerRef}
       className="w-full min-h-screen py-32 px-6 bg-brand-offwhite text-brand-black flex flex-col items-center justify-center overflow-hidden"
     >
       <div className="max-w-6xl w-full flex flex-col items-center">

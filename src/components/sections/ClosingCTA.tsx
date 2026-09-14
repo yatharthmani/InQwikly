@@ -1,8 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { useState, useRef } from "react";
-import { useScroll, useTransform } from "framer-motion";
 
 export function ClosingCTA() {
   const [email, setEmail] = useState("");
@@ -40,7 +39,7 @@ export function ClosingCTA() {
         setStatus("error");
         setMessage(data.error || "Something went wrong. Please try again.");
       }
-    } catch (err) {
+    } catch (_err) {
       setStatus("error");
       setMessage("Network error. Please try again.");
     }
