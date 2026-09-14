@@ -35,7 +35,7 @@ export function Hero() {
             }}
             transition={{
               duration: 2.5,
-              ease: [0.16, 1, 0.3, 1],
+              ease: [0.16, 1, 0.3, 1] as const,
               delay: Math.random() * 0.5,
             }}
             className="absolute text-brand-black/10 font-black text-6xl md:text-9xl tracking-tighter"
@@ -49,7 +49,7 @@ export function Hero() {
         <motion.h1 
           initial={{ opacity: 0, y: 50, filter: "blur(10px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          transition={{ duration: 1.2, delay: 1.5, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 1.2, delay: 1.5, ease: [0.16, 1, 0.3, 1] as const }}
           className="font-black text-[12vw] sm:text-7xl md:text-8xl lg:text-9xl tracking-tighter leading-[0.85] uppercase flex flex-col items-center w-full"
         >
           <span>NEWS.</span>

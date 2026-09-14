@@ -39,7 +39,7 @@ export function Categories() {
                 transition={{ 
                   duration: 0.5, 
                   delay: index * 0.1,
-                  ease: [0.16, 1, 0.3, 1] 
+                  ease: [0.16, 1, 0.3, 1] as const
                 }}
                 className="flex flex-col items-center justify-center w-32 h-32 md:w-48 md:h-48 rounded-3xl bg-white/5 border border-white/10 hover:bg-brand-red hover:border-brand-red transition-colors group cursor-default"
               >
